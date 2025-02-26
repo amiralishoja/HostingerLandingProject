@@ -1,0 +1,48 @@
+.main {
+    .company {
+        @include Position(relative);
+        background-image: linear-gradient(-45deg, lighten($blue-color, 8%) 30%, $blue-color 100%);
+        padding: 8rem 0 14rem 0;
+        text-align: center;
+        .company__content {
+            @include Flex(initial, center, column, nowrap, 2rem);
+            color: $app-color;
+            .company__title {
+                @include Font($Kalameh, 3.5rem);
+            }
+            .company__caption {
+    
+            }
+        }
+        .company__picture {
+            @include WidthHeight(100%, max-content);
+            @include Position(absolute, calc(100% + 8rem), 0, auto, 0);
+            @include Flex(center, center, row,wrap, 2rem);
+            @include Radius(1rem);
+            background-color: $app-color;
+            padding: 2rem;
+            .company__img {
+                @include WidthHeight(auto, 8rem);
+                box-shadow: 0 0 4rem 0.2rem $shadow-ligten-color;
+                &--cocacola {
+                    padding: 0 1.5rem;
+                }
+                &--paypal {
+                    padding: 0 1.5rem;
+                }
+                &--meta {
+                    padding: 1.5rem 1rem;
+                }
+                &--samsung {
+                    padding: 0 1.5rem;
+                }
+                &--xiaomi {
+                    padding: 0 1.5rem;
+                }
+                &:hover {
+                    box-shadow: 0 0 1rem 0.2rem $shadow-darken-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Style 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.header {
+    .nav {
+        @include Position(fixed, 0, 0, auto, 0);
+        height: 9rem;
+        padding: 2rem 0;
+        background-color: $app-color;
+        box-shadow: 0 -0.1rem 1rem 0 $shadow-ligten-color;
+        z-index: 999;
+        .nav__btn--menu {
+            @include WidthHeight(6vh);
+            @include Radius(0.8rem);
+            display: none;
+            background-color: $app-color;
+            padding: 0.8rem;
+            cursor: pointer;
+            box-shadow: 0 0 3rem 0.3rem $shadow-ligten-color;
+            transition: background-color 0.25s ease-out;
+            &:hover {
+                background-color: $purple-color;
+                .btn--menu__line {
+                    background-color: $app-color;
+                    &::before,
+                    &::after {
+                        background-color: $app-color;
+                    }
+                }
+            }
+            .btn--menu__line {
+                @include Position(relative);
+                @include WidthHeight(100%, 0.2rem);
+                @include Radius(2rem);
+                background-color: $purple-color;
+                &::before,
+                &::after {
+                    @include Position(absolute);
+                    @include WidthHeight(100%, 0.2rem);
+                    @include Radius(2rem);
+                    content: "";
+                    background-color: $purple-color;
+                }
+                &::before {
+                    top: -1.1vh;
+                }
+                &::after {
+                    bottom: -1.1vh;
+                }
+            }
+        }
+        .nav__logo {
+            @include Font($Request, 2.5rem);
+            color: $purple-color;
+        }
+        .nav__menu {
+            @include Flex(initial, center, row);
+            gap: 2rem;
+            height: 100%;
+            z-index: 998;
+            .menu__item {
+                height: 100%;
+                padding: 0 1rem;
+                cursor: pointer;
+            }
+            .menu__link {
+                position: relative;
+                color: $text-color;
+                &::before,
+                &::after {
+                    @include Position(absolute);
+                    @include WidthHeight(0, 0.3rem);
+                    @include Radius(0.5rem);
+                    content: "";
+                    background-color: $purple-color;
+                    transition: width 0.25s ease-out;
+                }
+                &::before {
+                    top: -1vh;
+                    left: 0;
+                }
+                &::after {
+                    bottom: -1vh;
+                    right: 0;
+                }
+                &:hover {
+                    &::before {
+                        @include WidthHeight(100%, 0.3rem);
+                    }
+                    &::after {
+                        @include WidthHeight(100%, 0.3rem);
+                    }
+                }
+            }
+        }
+        .nav__btn--login {
+            @include MaxWidthHeight(12.5rem);
+            @include WidthHeight(100%);
+            @include Radius(5rem);
+            padding: 0.7rem 0.7rem 0.7rem 1.3rem;
+            background-color: $app-color;
+            cursor: pointer;
+            box-shadow: 0 0 3rem 0.3rem $shadow-ligten-color;
+            &:hover {
+                transition: background-color 0.25s ease-out;
+                background-color: $purple-color;
+                .btn--login__icon {
+                    stroke: $app-color;
+                }
+                .btn--login__text {
+                    color: $app-color;
+                }
+            }
+            .btn--login__icon {
+                @include WidthHeight(3.5rem);
+            }
+            .btn--login__text {
+                color: $text-color;
+            }
+        }
+    }
+    .cover {
+        @include Position(fixed, 0, 0, 0, 0);
+        opacity: 0;
+        z-index: -1;
+        background-color: $cover-color;
+        transition: 0.25s ease-out;
+    }
+}

@@ -1,0 +1,24 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Responsive 2X Large
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+@media (max-width: 1399px) {
+    .header {
+        .home {
+            .home__shape {
+                @include WidthHeight(250%, auto);
+                &--white {
+                    @include Position(absolute, auto, -50rem, -21rem, 0);
+                }
+                &--transparent-one {
+                    @include Position(absolute, auto, -75rem, -23rem, 0);
+                }
+                &--transparent-two {
+                    @include Position(absolute, auto, -80rem, -21rem, 0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.footer {
+    background-image: linear-gradient(-45deg, $purple-color 30%, $blue-color 100%);
+    color: $app-color;
+    .footer__wrapper {
+        padding: 6rem 1.5rem 0 1.5rem;
+        .footer__content {
+            @include Flex(initial, initial, column, nowrap,1.5rem);
+            .footer__content__title {
+                @include Font($Kalameh, 3.5rem);
+            }
+            .footer__content__caption {
+    
+            }
+            .footer__content__email {
+                @include Flex(initial, center, row, nowrap);
+                @include WidthHeight(auto, 4.5rem);
+                @include Radius(0.8rem);
+                max-width: 32rem;
+                background-color: $app-color;
+                .footer__content__email__text {
+                    @include WidthHeight(100%, 4.5rem);
+                    @include Radius(0.8rem);
+                    @include Font($IranYekan, 1.6rem);
+                    border: none;
+                    padding: 0.8rem 1.6rem;
+                    color: $gray-color;
+                    &::placeholder {
+                        color: $gray-color;
+                    }
+                }
+                .footer__content__email__send {
+                    @include WidthHeight(4.5rem);
+                    @include Flex(center, center);
+                    @include Radius(0.8rem);
+                    background-color: $green-color;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    .footer__content__email__send__icon {
+                        @include WidthHeight(100%);
+                    }
+    
+                }
+            }
+        }
+        .footer__company {
+            @include Flex(initial, center, column, nowrap,1.5rem);
+            @include WidthHeight(100%, max-content);
+            .footer__company__logo {
+                @include Font($Request, 2.8rem);
+                margin: 1rem 0 0 0;
+            }
+            .footer__company__media {
+                @include WidthHeight(100%, max-content);
+                @include Flex(center, center, row-reverse, nowrap,1.5rem);
+                .media {
+                    @include WidthHeight(5rem);
+                    @include Flex(center, center);
+                    @include Radius(50%);
+                    padding: 0.8rem;
+                    transition: 0.3s ease-out;
+                    cursor: pointer;
+                    .media__icon {
+                        @include WidthHeight(100%);
+                        fill: $app-color;
+                        transition: 0.3s ease-out;
+                    }
+                    &--facebook {
+                        background-color: $blue-color;
+                        &:hover {
+                            background-color: $app-color;
+                            .media__icon {
+                                fill: $blue-color;
+                            }
+                        }
+                    }
+                    &--drible {
+                        background-color: $purple-color;
+                        &:hover {
+                            background-color: $app-color;
+                            .media__icon {
+                                fill: $purple-color;
+                            }
+                        }
+                    }
+                    &--skype {
+                        background-color: $blue-color;
+                        &:hover {
+                            background-color: $app-color;
+                            .media__icon {
+                                fill: $blue-color;
+                            }
+                        }
+                    }
+                    &--be {
+                        background-color: $gray-color;
+                        &:hover {
+                            background-color: $app-color;
+                            .media__icon {
+                                fill: $gray-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer__company__app {
+                @include Flex(center, center, row, nowrap,1.5rem);
+                @include WidthHeight(100%, max-content);
+                .app {
+                    @include WidthHeight(max-content, 6rem);
+                    @include Radius(1rem);
+                    overflow: hidden;
+                    border: 0.3rem solid $app-color;
+                    .app__img {
+                        @include WidthHeight(100%);
+                    }
+                }
+            }
+        }
+        .footer__copy__right {
+            direction: ltr;
+        }
+    }
+}

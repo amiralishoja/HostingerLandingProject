@@ -1,0 +1,6 @@
+@mixin Radius($top-right, $bottom-right: $top-right, $top-left: $top-right, $bottom-left: $bottom-right) {
+    border-top-right-radius: $top-right;
+    border-top-left-radius: $top-left;
+    border-bottom-right-radius: $bottom-right;
+    border-bottom-left-radius: $bottom-left;
+}

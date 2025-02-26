@@ -1,0 +1,86 @@
+.about {
+    padding: 7rem 0 2rem 0;
+    .about__company {
+        @include WidthHeight(100%, max-content);
+        @include Flex(initial, center, row, nowrap);
+        @include Radius(1rem);
+        padding: 3rem;
+        background-color: $app-color;
+        margin: 1.5rem 0;
+        .about__company__content {
+            @include Flex(initial, start, column, nowrap, 2rem);
+            color: $gray-color;
+            flex-basis: 50%;
+            .about__company__title {
+                @include Font($Kalameh, 3rem);
+            }
+            .about__company__caption {
+            
+            }
+            .about__comapny__btn {
+                @include WidthHeight(100%, max-content);
+                @include Flex(start, center, row, nowrap, 2rem);
+                .about__btn {
+                    @include Flex(space-evenly, center, row, nowrap, 1rem);
+                    @include Radius(0.6rem);
+                    padding: 0.8rem 1.5rem;
+                    cursor: pointer;
+                    .btn__icon {
+                        @include WidthHeight(2.5rem);
+                        color: $app-color;
+                    }
+                    .btn__text {
+                        color: $app-color;
+                    }
+                    &:hover {
+                        transition: 0.2s linear;
+                    }
+                    &--green {
+                        background-color: $green-color;
+                        outline: 0 solid $green-color;
+                        border: 0.3rem solid $green-color;
+                        &:hover {
+                            outline: 0.3rem solid $green-color;
+                            border: 0.3rem solid $app-color;
+                        }
+                    }
+                    &--purple {
+                        background-color: $purple-color;
+                        outline: 0 solid $purple-color;
+                        border: 0.3rem solid $purple-color;
+                        &:hover {
+                            outline: 0.3rem solid $purple-color;
+                            border: 0.3rem solid $app-color;
+                        }
+                    }
+                }
+            }
+        }
+        .about__company__img {
+            @include WidthHeight(50%, auto);
+            flex-basis: 50%;
+        }
+    }
+    .about__services {
+        @extend .about__company;
+        .about__services__img {
+            @extend .about__company__img;
+        }
+        .about__services__content {
+            @extend .about__company__content;
+            padding: 0 6rem;
+            .about__services__title {
+                @extend .about__company__title;
+            }
+            .services__list {
+                list-style: inside;
+                .list__item {
+                    color: $purple-color;
+                    .list__text {
+                        color: $gray-color;
+                    }
+                }
+            }
+        }
+    }
+}

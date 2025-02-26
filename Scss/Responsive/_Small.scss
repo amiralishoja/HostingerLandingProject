@@ -1,0 +1,222 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Responsive Small
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+@media (max-width: 575px) {
+    * {
+        cursor: default !important;
+    }
+    .header {
+        .nav {
+            padding: 2rem;
+            .nav__btn--menu {
+                display: flex;
+            }
+            .nav__btn--menu--active {
+                .btn--menu__line {
+                    height: 0;
+                    &:before {
+                        transition: 0.25s ease-out;
+                        transform: rotate(45deg) translate(0.7vh, 0.7vh);
+                    }
+                    &:after {
+                        transition: 0.25s ease-out;
+                        transform: rotate(-45deg) translate(0.7vh, -0.7vh);
+                    }
+                }
+            }
+            .nav__menu {
+                @include Flex(initial, initial, column, nowrap, 1.5rem);
+                @include Position(absolute, calc(100% + 2vh - 1px), 0, auto, 0);
+                @include WidthHeight(100%, 0);
+                overflow: hidden;
+                .menu__item {
+                    @include WidthHeight(100%, auto);
+                    @include Radius(0.8rem);
+                    padding: 1rem;
+                    background-color: $app-color;
+                    box-shadow: 0 0.3rem 1rem 0 $shadow-darken-color;
+                    &:hover {
+                        transition: 0.25s ease-out;
+                        background-color: $purple-color;
+                        .menu__link {
+                            color: $app-color;
+                            &:hover {
+                                &::before,
+                                &::after {
+                                    @include WidthHeight(0, auto);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .nav__menu--show {
+                @include Radius(0, 0.8rem);
+                padding: 1.5rem;
+                height: max-content;
+                background-color: $app-color;
+                transition: 0.25s ease-out;
+            }
+            .nav__btn--login {
+                padding: 0.8rem;
+            }
+        }
+        .home {
+            padding: 2rem;
+            .home__shape {
+                @include WidthHeight(300%, auto);
+                &--white {
+                    @include Position(absolute, auto, -60rem, -9rem, 0);
+                }
+                &--transparent-one {
+                    @include Position(absolute, auto, -50rem, -11rem, 0);
+                }
+                &--transparent-two {
+                    @include Position(absolute, auto, -50rem, -9rem, 0);
+                }
+            }
+        }
+    }
+    .main {
+        .services {
+            padding: 4rem 2rem 4rem 2rem;
+            .container {
+                .row {
+                    margin: 0;
+                    .col-12 {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+        .company {
+            padding: 8rem 2rem 14rem 2rem;
+        }
+        .about {
+            padding: 28rem 2rem 2rem 2rem;
+        }
+    }
+    .footer {
+        .footer__wrapper {
+            .footer__content {
+                .footer__content__title {
+                    @include Font($Kalameh, 2.8rem);
+                }
+            }
+        }
+    }
+    .cover--show {
+        opacity: 1;
+        z-index: 997;
+    }
+}
+@media (max-width: 465px) {
+    .header {
+        .home {
+            .container {
+                .row {
+                    .home__picture {
+                        @include WidthHeight(auto, 28rem);
+                    }
+                }
+            }
+            .home__shape {
+                @include WidthHeight(300%, auto);
+                &--white {
+                    @include Position(absolute, auto, -40rem, -6rem, 0);
+                }
+                &--transparent-one {
+                    @include Position(absolute, auto, -35rem, -6rem, 0);
+                }
+                &--transparent-two {
+                    @include Position(absolute, auto, -30rem, -5.5rem, 0);
+                }
+            }
+        }
+    }
+    .main {
+        .company {
+            .company__picture {
+                .company__img {
+                    @include WidthHeight(auto, 5.5rem);
+                }
+            }
+        }
+        .about {
+            padding: 12rem 2rem 2rem 2rem;
+        }
+        .panels {
+            .panels__wrapper {
+                .panels__item-wrapper {
+                    .panels__item {
+                        .panels__item__body {
+                            .panels__item__body__list {
+                                padding: 1.5rem;
+                                .panels__item__body__list__item {
+                                    .panels__item__body__list__item__icon {
+                                        @include WidthHeight(2rem);
+                                    }
+                                    .panels__item__body__list__item__text {
+                                        @include Font($IranYekan, 1.4rem);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .footer__wrapper {
+            .footer__company {
+                .footer__company__app {
+                    flex-wrap: wrap;
+                }
+            }
+            .footer__copy__right {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+@media (max-width: 423px) {
+    .main {
+        .about {
+            padding: 20rem 2rem 2rem 2rem;
+            .about__company {
+                .about__company__content {
+                    .about__comapny__btn {
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+                        .about__btn {
+                            @include WidthHeight(100%, auto);
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+        .comments {
+            .comments__wrapper {
+                .comment__wrapper {
+                    .comment {
+                        padding: 3.5rem 2rem 2rem 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .footer__wrapper {
+            .footer__content {
+                .footer__content__title {
+                    @include Font($Kalameh, 2.5rem);
+                }
+            }
+        }
+    }
+}

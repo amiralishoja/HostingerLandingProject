@@ -1,0 +1,63 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Responsive Large
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+@media (max-width: 991px) {
+    .header {
+        .nav {
+            .nav__menu {
+                @include Flex(initial, initial, row, nowrap, 1rem);
+                .menu__item {
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+        .home {
+            .home__shape {
+                @include WidthHeight(250%, auto);
+                &--white {
+                    @include Position(absolute, auto, -70rem, -12rem, 0);
+                }
+                &--transparent-one {
+                    @include Position(absolute, auto, -60rem, -13rem, 0);
+                }
+                &--transparent-two {
+                    @include Position(absolute, auto, -55rem, -11rem, 0);
+                }
+            }
+            .home__picture {
+                @include WidthHeight(100%, auto);
+            }
+        }
+    }
+    .main {
+        .about {
+            padding: 18rem 0 2rem 0;
+            .about__company {
+                flex-direction: column-reverse;
+                .about__company__img {
+                    @include WidthHeight(100%, auto);
+                    flex-basis: auto;
+                }
+                .about__company__content {
+                    flex-basis: auto;
+                }
+            }
+            .about__services {
+                flex-direction: column;
+                .about__services__content {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .footer {
+        .footer__wrapper {
+            .row {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

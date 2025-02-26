@@ -1,0 +1,22 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Helper Class
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+.flex-sb-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-full {
+    height: 100%;
+}
+.pad-15 {
+    padding: 1.5rem;
+}

@@ -1,0 +1,34 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Reset Style
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: $IranYekan;
+    scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    direction: rtl;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    outline: none;
+}

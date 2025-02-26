@@ -1,0 +1,109 @@
+.main {
+    background-color: $shadow-ligten-color;
+    .services {
+        padding: 8rem 0;
+        background-color: $app-color;
+        .container {
+            .row {
+                margin: -1rem;
+                .col-12 {
+                    padding: 1rem;
+                    .service {
+                        @include Flex(initial, center, column, nowrap,1.5rem);
+                        @include Radius(1rem);
+                        padding: 1.5rem;
+                        box-shadow: 0 0 3rem 1rem $shadow-darken-color;
+                        .service__icon {
+                            @include WidthHeight(6rem);
+                        }
+                        .service__title {
+                            @include Font($Kalameh, 2.5rem);
+                            color: $gray-color;
+                        }
+                        .service__caption {
+                            @include Font($IranYekan, 1.4rem);
+                            color: $gray-color;
+                            text-align: justify;
+                        }
+                        .service__btn {
+                            @include Flex(space-evenly, center, row, nowrap,1rem);
+                            @include Radius(0.6rem);
+                            padding: 0.8rem 1.5rem;
+                            cursor: pointer;
+                            .service__btn-icon {
+                                @include WidthHeight(2.5rem);
+                                stroke: $app-color;
+                            }
+                            .service__btn-text {
+                                color: $app-color;
+                            }
+                        }
+                        &--green {
+                            .service__icon {
+                                stroke: $green-color;
+                            }
+                            .service__btn {
+                                background-color: $green-color;
+                                outline: 0 solid $green-color;
+                                border: 0.3rem solid $green-color;
+                                &:hover {
+                                    transition: 0.2s linear;
+                                    border-color: $app-color;
+                                    outline: 0.3rem solid $green-color;
+                                }
+                            }
+                        }
+                        &--purple {
+                            .service__icon {
+                                stroke: $purple-color;
+                            }
+                            .service__btn {
+                                background-color: $purple-color;
+                                outline: 0 solid $purple-color;
+                                border: 0.3rem solid $purple-color;
+                                &:hover {
+                                    transition: 0.2s linear;
+                                    border-color: $app-color;
+                                    outline: 0.3rem solid $purple-color;
+                                }
+                            }
+                        }
+                        &--yellow {
+                            .service__icon {
+                                stroke: $yellow-color;
+                            }
+                            .service__btn {
+                                background-color: $yellow-color;
+                                outline: 0 solid $yellow-color;
+                                border: 0.3rem solid $yellow-color;
+                                &:hover {
+                                    transition: 0.2s linear;
+                                    border-color: $app-color;
+                                    outline: 0.3rem solid $yellow-color;
+                                }
+                            }
+                        }
+                        &--blue {
+                            .service__icon {
+                                stroke: $blue-color;
+                            }
+                            .service__btn {
+                                background-color: $blue-color;
+                                outline: 0 solid $blue-color;
+                                border: 0.3rem solid $blue-color;
+                                &:hover {
+                                    transition: 0.2s linear;
+                                    border-color: $app-color;
+                                    outline: 0.3rem solid $blue-color;
+                                }
+                            }
+                        }
+                        &:hover {
+                            box-shadow: 0 0 1rem 1rem $shadow-darken-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

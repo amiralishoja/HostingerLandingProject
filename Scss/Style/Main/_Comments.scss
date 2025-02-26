@@ -1,0 +1,69 @@
+.main {
+    .comments {
+        .comments__wrapper {
+            padding: 6rem 1.5rem;
+            .comment__wrapper {
+                @include Position(relative);
+                padding: 0 0 0 4rem;
+                .comment {
+                    @include Radius(0.8rem);
+                    @include Flex(initial, start, column, nowrap, 2rem);
+                    padding: 3.5rem 4rem 2rem 4rem;
+                    background-color: $app-color;
+                    overflow: hidden;
+                    .comments__head {
+                        @include WidthHeight(100%, max-content);
+                        .comments__head__name {
+                            @include Font($IranYekan, 1.8rem);
+                        }
+                        .comments__head__job {
+                            color: $gray-color;
+                        }
+                    }
+                    .comments__body {
+                        @include Flex(initial, start, column, nowrap, 2rem);
+                        color: $gray-color;
+                        .commetns__body__caption {
+                        }
+                        .comments__body__poll {
+                            @include Flex(start, center, row, nowrap, 1.5rem);
+                            @include Radius(0.5rem);
+                            padding: 0.4rem 0.8rem;
+                            color: $app-color;
+                            .comments__body__poll__icon {
+                                @include WidthHeight(2.5rem);
+                            }
+                            .comments__body__poll__text {
+                                margin: 0.4rem 0 0 0;
+                            }
+                            &--green {
+                                background-color: $green-color;
+                            }
+                            &--yellow {
+                                background-color: $yellow-color;
+                            }
+                        }
+                    }
+                    .comments__profile {
+                        @include Position(absolute, 2rem, auto, auto, 0);
+                        @include Radius(50%);
+                        @include WidthHeight(8rem);
+                        border: 0.8rem solid $shadow-ligten-color;
+                    }
+                    .comments__radius__one {
+                        @include Position(absolute, -1.2rem, auto, auto, 4rem);
+                        @include Radius(2rem);
+                        @include WidthHeight(4rem);
+                        box-shadow: -1rem 1rem 0 -1rem $shadow-ligten-color;
+                    }
+                    .comments__radius__two {
+                        @include Position(absolute, 9.2rem, auto, auto, 4rem);
+                        @include Radius(2rem);
+                        @include WidthHeight(4rem);
+                        box-shadow: -1rem -1rem 0 -1rem $shadow-ligten-color;
+                    }
+                }
+            }
+        }
+    }  
+}

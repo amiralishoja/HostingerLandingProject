@@ -1,0 +1,24 @@
+/* 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    Responsive X Large
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+@media (max-width: 1199px) {
+    .header {
+        .home {
+            .home__shape {
+                @include WidthHeight(250%, auto);
+                &--white {
+                    @include Position(absolute, auto, -50rem, -18rem, 0);
+                }
+                &--transparent-one {
+                    @include Position(absolute, auto, -60rem, -18rem, 0);
+                }
+                &--transparent-two {
+                    @include Position(absolute, auto, -60rem, -16rem, 0);
+                }
+            }
+        }
+    }
+}

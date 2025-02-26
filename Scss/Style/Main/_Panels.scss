@@ -1,0 +1,144 @@
+.main {
+    .panels {
+        @include WidthHeight(100%, max-content);
+        background-color: $app-color;
+        color: $gray-color;
+        .panels__wrapper {
+            padding: 6rem 1.5rem;
+            .panels__content {
+                @include Flex(initial, start, column, nowrap, 2rem);
+                .panels__content__title {
+                    @include Font($Kalameh, 3rem);
+                }
+                .panels__content__caption {
+                
+                }
+                .panels__content__btn {
+                    @include Flex(space-evenly, center, row, nowrap, 1rem);
+                    @include Radius(0.6rem);
+                    border: 0.3rem solid $purple-color;
+                    outline: 0 solid $purple-color;
+                    padding: 0.8rem 1.5rem;
+                    background-color: $purple-color;
+                    color: $app-color;
+                    cursor: pointer;
+                    .panels__content__btn__icon {
+                        @include WidthHeight(2.5rem);
+                    }
+                    .panels__content__btn__text {
+                    
+                    }
+                    &:hover {
+                        transition: 0.2s linear;
+                        border: 0.3rem solid $app-color;
+                        outline: 0.3rem solid $purple-color;
+                    }
+                }
+            }
+            .panels__name-wrapper {
+                @include WidthHeight(100%, 6.5rem);
+                @include Radius(6rem);
+                box-shadow: 0 0 1rem 0.3rem $shadow-darken-color inset;
+                background-color: $shadow-ligten-color;
+                padding: 1rem;
+                .panels__name {
+                    @include WidthHeight(100%);
+                    @include Radius(6rem);
+                    @include Flex(initial, center, row, nowrap);
+                    background-color: $app-color;
+                    cursor: pointer;
+                    .panels__name__item {
+                        @include WidthHeight(100%);
+                        @include Flex(center, center, row, nowrap);
+                        @include Radius(6rem);
+                        &--active {
+                            background-color: $purple-color;
+                            color: $app-color;
+                        }
+                    }
+                }
+            }
+            .panels__item-wrapper {
+                @include WidthHeight(100%, max-content);
+                @include Radius(3rem);
+                box-shadow: 0 0 1rem 0.3rem $shadow-darken-color inset;
+                background-color: $shadow-ligten-color;
+                padding: 1rem;
+                margin: 2rem 0 0 0;
+                .panels__item {
+                    @include WidthHeight(0);
+                    @include Radius(2.5rem);
+                    background-color: $app-color;
+                    opacity: 0;
+                    overflow: hidden;
+                    .panels__item__head {
+                        @include WidthHeight(100%, auto);
+                        @include Flex(center, center, row, nowrap, 2rem);
+                        padding: 2rem;
+                        color: $app-color;
+                        .panels__item__head__icon {
+                            @include WidthHeight(4.5rem);
+                        }
+                        .panels__item__head__title {
+                            @include Font($Kalameh, 2.5rem);
+                        }
+                    }
+                    .panels__item__body {
+                        @include WidthHeight(100%, auto);
+                        .panels__item__body__list {
+                            @include Flex(center, start, column, nowrap, 1rem);
+                            padding: 2rem;
+                            .panels__item__body__list__item {
+                                @include Flex(start, center, row, nowrap, 1rem);
+                                .panels__item__body__list__item__icon {
+                                    @include WidthHeight(2.5rem);
+                                    stroke: $purple-color;
+                                    stroke-width: 1.5;
+                                }
+                                .panels__item__body__list__item__text {
+                                
+                                }
+                            }
+                        }
+                        .panels__item__body__btn {
+                            @include WidthHeight(100%, auto);
+                            @include Flex(center, center, row, nowrap, 1rem);
+                            background-color: $green-color;
+                            color: $app-color;
+                            padding: 1.5rem;
+                            cursor: pointer;
+                            .panels__item__body__btn__icon {
+                                @include WidthHeight(3.5rem);
+                            }
+                            .panels__item__body__btn__text {
+                                @include Font($IranYekan, 2rem);
+                            }
+                        }
+                    }
+                    &--three {
+                        .panels__item__head {
+                            background-color: $yellow-color;
+                        }
+                    }
+                    &--six {
+                        .panels__item__head {
+                            background-color: $blue-color;
+                        }
+                    
+                    }
+                    &--twelve {
+                        .panels__item__head {
+                            background-color: $purple-color;
+                        }
+                    }
+                    &--show  {
+                        @include WidthHeight(100%);
+                        transition: opacity 0.3s linear;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
